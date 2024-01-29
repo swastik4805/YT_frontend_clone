@@ -1,8 +1,8 @@
 
-export function VideoCard(){
+export function VideoCard(props){
     return(
         
-        <div>
+        <div className="p-2">
             <img className="rounded-xl" src="image1.jpg"></img>
             <div className="grid grid-cols-12 pt-2">
 
@@ -11,9 +11,9 @@ export function VideoCard(){
                 </div>
 
                 <div className="col-span-11 pl-2">
-                    <div >Hello Apple Vision Pro</div>
-                    <div className="col-span-11 text-gray-400 text-sm">Apple</div>
-                    <div className="col-span-11 text-gray-400 text-sm">202K views . 5 hours ago</div>
+                    <div >{props.title}</div>
+                    <div className="col-span-11 text-gray-400 text-sm">{props.channel}</div>
+                    <div className="col-span-11 text-gray-400 text-sm">{props.views} . {props.uploadedBefore}</div>
                 </div>
             </div>
         </div>
