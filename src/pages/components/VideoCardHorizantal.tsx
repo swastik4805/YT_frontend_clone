@@ -25,7 +25,7 @@ export const VideoCardHorizontal = ({video}) => {
                     {video.views} 
                 </div>
                 <div className={"text-gray-400 text-xs font-normal		"}>
-                {/* • {video.timestamp} */}
+                • {video.uploadedBefore}
                 </div>
             </div>
         </div>
