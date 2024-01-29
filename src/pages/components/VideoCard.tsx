@@ -1,9 +1,13 @@
+import { useRouter } from "next/router";
 
-export function VideoCard(props){
+export function VideoCard(props: any){
+    const router=useRouter();
     return(
         
-        <div className="p-2">
-            <img className="rounded-xl" src="image1.jpg"></img>
+        <div className="p-2 cursor-pointer" onClick={()=>{
+            router.push("video/1");
+        }}>
+            <img className="rounded-xl" src={props.thumbnail}></img>
             <div className="grid grid-cols-12 pt-2">
 
                 <div className="col-span-1">
